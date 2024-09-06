@@ -1,0 +1,144 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.page2-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 75px;
+}
+
+.page2-header-wrapper {
+    width: 100%;
+    background-color: rgb(40,43,48);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 5px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+    background-color: rgb(40,43,48);
+}
+
+.page2-header {
+    display: flex;
+    background-color: rgb(40,43,48);
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    height: 40px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.page2-tab {
+    background-color: rgb(40,43,48);
+    color: #fff;
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page2-tab:first-child {
+    border-right: none;
+}
+
+.page2-tab.active {
+    background-color: rgb(28,31,36);
+}
+
+.page2-tab:not(.active) {
+    background-color: rgb(40,43,48);
+}
+
+.page2-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.page2-game-option {
+    background-color: rgb(28,31,36);
+    border-radius: 12px;
+    padding: 5px; /* Padding değerini azaltarak kenar boşluklarını azaltırız */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Yazı ile resim arasındaki boşluğu azaltır */
+    cursor: pointer;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow: hidden; /* Taşmayı önler */
+}
+
+.page2-game-option img {
+    width: 100%; /* Ebeveynin genişliği kadar */
+    height: auto; /* Yükseklik otomatik */
+    max-height: 200px; /* Maksimum yükseklik */
+    object-fit: cover; /* İçerikte kesme yapmadan sığdırır */
+    border-radius: 6px; /* Köşe yuvarlamalarını uygular */
+    margin: 0; /* Kenar boşluklarını sıfırlar */
+}
+
+.page2-game-option p {
+    font-size: 11px; /* Yazı puntolarını küçültür */
+    font-weight: 700; /* Daha kalın font */
+    color: #fff;
+    margin: 0; /* Üst ve alt kenar boşluklarını sıfırlar */
+    margin-bottom: 35px; /* Yazının altındaki boşluk */
+    text-align: center;
+    line-height: 1.2; /* Satır yüksekliğini azaltır */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .page2-game-option img {
+        max-height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page2-game-option img {
+        max-height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page2-game-option img {
+        max-height: 120px;
+    }
+}

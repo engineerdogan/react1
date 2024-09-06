@@ -1,0 +1,144 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    overflow: auto; /* Kaydırma işlevini aktif tutar */
+}
+
+/* Scroll bar'ları görünmez yapar ancak kaydırma işlevini korur */
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Geri planı şeffaf yapar */
+}
+
+.page1-container, .page3-container {
+    width: 100vw;
+    max-width: 800px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    padding-bottom: 75px; /* Alt kısımda yer bırakıyoruz */
+}
+
+/* Başlık ve alt başlık */
+.page1-title, .page3-title {
+    font-size: 28px; /* Başlık boyutu */
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px; /* Üst başlıkla alt başlık arası boşluk */
+}
+
+.page1-subtitle, .page3-subtitle {
+    font-size: 18px; /* Alt başlık boyutu */
+    font-weight: 400;
+    color: #b0b0b0;
+    text-align: center;
+    margin-bottom: 30px; /* Alt başlık ile içerik arası boşluk */
+}
+
+/* Sunucu kartları */
+.page1-info-header {
+    width: 100%;
+    background-color: #282c30;
+    border-radius: 12px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* İkon ve içerik arasındaki boşluğu daralttık */
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+
+/* İkon ve içerik stili */
+.page1-info-icon {
+    font-size: 36px; /* Biraz daha küçük ikon */
+    color: #ffdd57;
+}
+
+.page1-info-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.page1-info-left {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page1-info-left div:first-child {
+    font-weight: bold;
+}
+
+.page1-info-right {
+    text-align: right;
+    font-weight: bold;
+    color: #ffdd57; /* Sağdaki metni sarıya boyuyoruz */
+}
+
+/* To-Do input ve butonları */
+.page3-todo-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+.page3-todo-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffdd57;
+    color: #000;
+    cursor: pointer;
+}
+
+/* To-Do listesi */
+.page3-todo-list {
+    list-style: none;
+    padding: 0;
+    width: 100%; /* Sayfanın genişliğine uyacak şekilde */
+    max-width: 800px; /* Maksimum genişliği sayfa ile uyumlu hale getirdik */
+    margin: 20px auto; /* Ortalamak için otomatik margin ve üst-alt boşluk */
+}
+
+.page3-todo-item {
+    background-color: #282c30;
+    color: #e0e0e0;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.page3-todo-complete {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.page3-todo-remove {
+    cursor: pointer;
+    color: #ff5f5f;
+}

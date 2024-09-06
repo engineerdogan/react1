@@ -1,0 +1,14 @@
+src/
+│
+├── components/
+│   └── Navbar.js
+│
+├── pages/
+│   ├── GeneratePassword.js
+│   ├── Page1.js
+│   ├── Page2.js
+│   └── Page3.js
+│
+├── App.js
+├── App.css
+└── index.js
