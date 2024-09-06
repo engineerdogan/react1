@@ -13,6 +13,14 @@ body {
     overflow-y: auto;
 }
 
+
+/* Scroll bar'ları görünmez yapar ancak kaydırma işlevini korur */
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Geri planı şeffaf yapar */
+}
+
+
 .page3-container {
     width: 100vw;
     max-width: 800px;
