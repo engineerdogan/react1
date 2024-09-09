@@ -11,7 +11,7 @@
     border-top: 0px solid #000;
     border-bottom: 1px solid #000;
     border-radius: 0 0 18px 18px;
-    height: 80px; /* Yüksekliği artırdık */
+    height: 70px; /* Yüksekliği biraz küçülttük */
 }
 
 .nav-link {
@@ -21,19 +21,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60px; /* Genişliği artırdık */
-    height: 60px; /* Yüksekliği artırdık */
+    width: 50px; /* Genişliği biraz küçülttük */
+    height: 50px; /* Yüksekliği biraz küçülttük */
     border-radius: 10px;
     transition: background-color 0.3s, color 0.3s;
-    font-size: 12px; /* Yazı boyutunu artırdık */
+    font-size: 10px; /* Yazı boyutunu biraz küçülttük */
     font-weight: 500;
     border: 2px solid transparent;
-    padding: 5px; /* İçerik etrafında boşluk */
+    padding: 3px; /* İçerik etrafında boşluk */
 }
 
 .nav-link i, .nav-link .nav-icon {
-    font-size: 24px; /* İkon boyutu */
-    margin-bottom: 5px; /* İkon ile metin arasındaki boşluk */
+    font-size: 20px; /* İkon boyutunu biraz küçülttük */
+    margin-bottom: 3px; /* İkon ile metin arasındaki boşluk */
 }
 
 .nav-link i.icon-lock {
@@ -59,6 +59,6 @@
 }
 
 .nav-icon {
-    font-size: 24px; /* İkon boyutu */
-    margin-bottom: 5px; /* İkon ile metin arasındaki boşluk */
+    font-size: 20px; /* İkon boyutu */
+    margin-bottom: 3px; /* İkon ile metin arasındaki boşluk */
 }
