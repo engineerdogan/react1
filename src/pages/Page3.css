@@ -19,10 +19,10 @@
 }
 
 .page3-title {
-    font-size: 24px; /* Daha küçük yazı boyutu */
+    font-size: 24px;
     font-style: normal;
-    font-weight: bold; /* Kalın yazı */
-    line-height: 32px; /* Satır yüksekliği */
+    font-weight: bold;
+    line-height: 32px;
     margin-bottom: 12px;
 }
 
@@ -51,12 +51,12 @@
 
 .page3-invite-icon {
     flex-shrink: 0;
-    margin-right: 12px; /* İkon ile metin arasındaki boşluk */
+    margin-right: 12px;
 }
 
 .page3-icon {
-    font-size: 32px; /* İkon boyutu */
-    color: rgb(255, 201, 32); /* Sarı renk */
+    font-size: 32px;
+    color: rgb(255, 201, 32);
 }
 
 .page3-invite-text {
@@ -67,9 +67,9 @@
 }
 
 .page3-invite-header {
-    font-size: 18px; /* Daha küçük yazı boyutu */
-    font-weight: bold; /* Kalın yazı */
-    margin-bottom: 16px; /* Başlık ve fiyat arasındaki boşluk */
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 16px;
 }
 
 .page3-invite-details {
@@ -79,13 +79,97 @@
 }
 
 .page3-price-value.text-yellow {
-    color: rgb(255, 201, 32); /* Sarı renk */
-    font-size: 14px; /* Daha küçük yazı boyutu */
-    font-weight: bold; /* Kalın yazı */
-    margin-right: 10px; /* Yazılar arasındaki boşluk */
+    color: rgb(255, 201, 32);
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
 }
 
 .page3-invite-footer {
-    font-size: 14px; /* Daha küçük yazı boyutu */
-    font-weight: normal; /* İnce puntolu yazı */
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.page3-more-bonuses {
+    color: #5a60ff;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.page3-bonuses {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.page3-bonuses-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.page3-header-item {
+    font-size: 16px;
+    color: #d1d1d1; /* Gri renk */
+    font-weight: thin; /* İnce yazı */
+    width: 33%; /* Her başlığa eşit genişlik */
+    text-align: center; /* Başlıkları ortala */
+}
+
+.page3-bonuses-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.page3-bonuses-item {
+    align-items: center;
+    background: #272a2f;
+    border-radius: 20px;
+    display: flex;
+    margin-bottom: 6px;
+    padding: 12px;
+}
+
+.page3-bonuses-content {
+    display: flex;
+    align-items: center;
+    width: 50%; /* İkon ve isim sütunu genişliği */
+}
+
+.page3-bonuses-icon {
+    margin-right: 12px; /* İkon ile metin arasındaki boşluk */
+}
+
+.page3-bonuses-name {
+    font-size: 16px; /* İsim için uygun font boyutu */
+    font-weight: normal;
+    color: #e0e0e0;
+}
+
+.page3-bonuses-values {
+    display: flex;
+    align-items: center;
+    width: 50%; /* Detaylar sütunu genişliği */
+}
+
+.page3-price-value.text-yellow {
+    color: rgb(255, 201, 32);
+    font-size: 16px; /* Daha büyük yazı boyutu */
+    font-weight: bold;
+    margin-right: 15px; /* Aralarındaki boşluk */
+}
+
+.page3-title-section p {
+    font-weight: bold; /* Kalın yazı */
+    color: #fff; /* Beyaz yazı rengi */
+    text-align: left; /* Sola dayalı */
+    margin: 0; /* Margini sıfırla */
 }
