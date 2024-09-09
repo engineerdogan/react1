@@ -1,26 +1,3 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #000;
-    color: #e0e0e0;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-
-/* Scroll bar'ları görünmez yapar ancak kaydırma işlevini korur */
-body::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* Geri planı şeffaf yapar */
-}
-
-
 .page3-container {
     width: 100vw;
     max-width: 800px;
@@ -30,72 +7,85 @@ body::-webkit-scrollbar {
     align-items: center;
     padding: 20px;
     margin-top: 20px;
-    padding-bottom: 75px;
-}
-
-/* Başlık ve alt başlık */
-.page3-title {
-    font-size: 28px; /* Başlık boyutu */
-    font-weight: bold;
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 10px; /* Üst başlıkla alt başlık arası boşluk */
-}
-
-.page3-subtitle {
-    font-size: 18px; /* Alt başlık boyutu */
-    font-weight: 400;
-    color: #b0b0b0;
-    text-align: center;
-    margin-bottom: 30px; /* Alt başlık ile içerik arası boşluk */
-}
-
-/* To-Do input ve butonları */
-.page3-todo-input {
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #555;
-    margin-bottom: 20px;
-    background-color: #333;
+    margin-bottom: 75px;
+    background-color: #000;
     color: #e0e0e0;
 }
 
-.page3-todo-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    background-color: #ffdd57;
-    color: #000;
-    cursor: pointer;
+.page3-title-section {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-/* To-Do listesi */
-.page3-todo-list {
+.page3-title {
+    font-size: 24px; /* Daha küçük yazı boyutu */
+    font-style: normal;
+    font-weight: bold; /* Kalın yazı */
+    line-height: 32px; /* Satır yüksekliği */
+    margin-bottom: 12px;
+}
+
+.page3-description {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.page3-invite-list {
     list-style: none;
     padding: 0;
-    width: 100%; /* Sayfanın genişliğine uyacak şekilde */
-    max-width: 800px; /* Maksimum genişliği sayfa ile uyumlu hale getirdik */
-    margin: 20px auto; /* Ortalamak için otomatik margin ve üst-alt boşluk */
+    margin: 0;
+    width: 100%;
 }
 
-.page3-todo-item {
-    background-color: #282c30;
-    color: #e0e0e0;
-    padding: 10px;
-    border-radius: 8px;
+.page3-invite-item {
+    align-items: center;
+    background: #272a2f;
+    border-radius: 20px;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
+    padding: 12px;
+    box-sizing: border-box;
+    color: #fff;
 }
 
-.page3-todo-complete {
-    text-decoration: line-through;
-    color: #888;
+.page3-invite-icon {
+    flex-shrink: 0;
+    margin-right: 12px; /* İkon ile metin arasındaki boşluk */
 }
 
-.page3-todo-remove {
-    cursor: pointer;
-    color: #ff5f5f;
+.page3-icon {
+    font-size: 32px; /* İkon boyutu */
+    color: rgb(255, 201, 32); /* Sarı renk */
+}
+
+.page3-invite-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+}
+
+.page3-invite-header {
+    font-size: 18px; /* Daha küçük yazı boyutu */
+    font-weight: bold; /* Kalın yazı */
+    margin-bottom: 16px; /* Başlık ve fiyat arasındaki boşluk */
+}
+
+.page3-invite-details {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.page3-price-value.text-yellow {
+    color: rgb(255, 201, 32); /* Sarı renk */
+    font-size: 14px; /* Daha küçük yazı boyutu */
+    font-weight: bold; /* Kalın yazı */
+    margin-right: 10px; /* Yazılar arasındaki boşluk */
+}
+
+.page3-invite-footer {
+    font-size: 14px; /* Daha küçük yazı boyutu */
+    font-weight: normal; /* İnce puntolu yazı */
 }

@@ -7,11 +7,11 @@
     display: flex;
     justify-content: space-around; /* Başlıkları yatay olarak ortala */
     align-items: center; /* Başlıkları dikey olarak ortala */
-    padding: 1px;
+    padding: 5px; /* İç boşluk */
     border-top: 0px solid #000;
     border-bottom: 1px solid #000;
     border-radius: 0 0 18px 18px;
-    height: 65px;
+    height: 80px; /* Yüksekliği artırdık */
 }
 
 .nav-link {
@@ -21,18 +21,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 60px; /* Genişliği artırdık */
+    height: 60px; /* Yüksekliği artırdık */
     border-radius: 10px;
     transition: background-color 0.3s, color 0.3s;
-    font-size: 10px;
+    font-size: 12px; /* Yazı boyutunu artırdık */
     font-weight: 500;
     border: 2px solid transparent;
+    padding: 5px; /* İçerik etrafında boşluk */
 }
 
-.nav-link i {
-    font-size: 20px;
-    margin-bottom: 3px;
+.nav-link i, .nav-link .nav-icon {
+    font-size: 24px; /* İkon boyutu */
+    margin-bottom: 5px; /* İkon ile metin arasındaki boşluk */
 }
 
 .nav-link i.icon-lock {
@@ -49,10 +50,15 @@
     border-color: rgb(28, 31, 36); /* Tıklandığında çerçeve rengi */
 }
 
-.nav-link.active i {
+.nav-link.active i, .nav-link.active .nav-icon {
     color: #fff; /* Aktif durumda ikon rengini beyaz yapar */
 }
 
 .nav-link:not(.active) i.icon-lock-open {
     color: rgb(158, 161, 166); /* Ana sayfa aktif değilse gri */
+}
+
+.nav-icon {
+    font-size: 24px; /* İkon boyutu */
+    margin-bottom: 5px; /* İkon ile metin arasındaki boşluk */
 }

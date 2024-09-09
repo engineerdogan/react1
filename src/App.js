@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';  // Navbar, src/components altında
-import GeneratePassword from './pages/GeneratePassword';  // GeneratePassword, src/pages altında
+import GeneratePassword from './pages/Main';  // GeneratePassword, src/pages altında
 import Page1 from './pages/Page1';  // Page1, src/pages altında
 import Page2 from './pages/Page2';  // Page2, src/pages altında
 import Page3 from './pages/Page3';  // Page3, src/pages altında

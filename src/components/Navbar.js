@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import './Navbar.css';
+import { FaGift, FaStar, FaUsers, FaGamepad } from 'react-icons/fa'; // Font Awesome ikonları
 
 const Navbar = () => {
     const location = useLocation(); // Aktif olan sayfanın yolunu almak için
@@ -12,17 +13,16 @@ const Navbar = () => {
                 className="nav-link" 
                 activeClassName="active"
             >
-                {/* Ana sayfada fa-lock-open, diğer sayfalarda fa-lock */}
-                <i className={`fas ${location.pathname === '/' ? 'fa-lock-open' : 'fa-lock'}`}></i> Şifre Üret
+                <i className={`fas ${location.pathname === '/' ? 'fa-lock-open icon-lock-open' : 'fa-lock icon-lock'}`}></i> Şifre Üret
             </NavLink>
             <NavLink to="/page1" className="nav-link" activeClassName="active">
-                <i className="fas fa-tools"></i> SAP
+                <i className="fas fa-tools"></i> Page1
             </NavLink>
             <NavLink to="/page2" className="nav-link" activeClassName="active">
-                <i className="fas fa-gamepad"></i> Sayfa 2
+                <FaGamepad className="nav-icon" /> Playground
             </NavLink>
             <NavLink to="/page3" className="nav-link" activeClassName="active">
-                <i className="fas fa-clipboard-list"></i> To-Do
+                <FaUsers className="nav-icon" /> Arkadaşlar
             </NavLink>
         </nav>
     );

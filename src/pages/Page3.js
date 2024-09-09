@@ -1,51 +1,47 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Page3.css';
+import { FaGift, FaStar } from 'react-icons/fa'; // Font Awesome ikonları
 
-const Page3 = () => {
-    const [todos, setTodos] = useState([]);
-    const [inputValue, setInputValue] = useState("");
-
-    const addTodo = () => {
-        if (inputValue.trim() === "") return;
-        setTodos([...todos, { text: inputValue, completed: false }]);
-        setInputValue("");
-    };
-
-    const removeTodo = (index) => {
-        setTodos(todos.filter((_, i) => i !== index));
-    };
-
-    const toggleComplete = (index) => {
-        const updatedTodos = todos.map((todo, i) =>
-            i === index ? { ...todo, completed: !todo.completed } : todo
-        );
-        setTodos(updatedTodos);
-    };
-
-    return (
-        <div className="page3-container">
-            <h1 className="page3-title">To-Do Listesi</h1>
-            
-            <input
-                className="page3-todo-input"
-                type="text"
-                placeholder="Yeni görev ekleyin..."
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-            />
-            
-            <button className="page3-todo-button" onClick={addTodo}>Ekle</button>
-            
-            <ul className="page3-todo-list">
-                {todos.map((todo, index) => (
-                    <li key={index} className={`page3-todo-item ${todo.completed ? 'page3-todo-complete' : ''}`}>
-                        <span>{index + 1}. {todo.text}</span> {/* Sıra numarasını ekliyoruz */}
-                        <span className="page3-todo-remove" onClick={() => removeTodo(index)}>X</span>
-                    </li>
-                ))}
-            </ul>
+const Page3 = () => (
+    <div className="page3-container">
+        {/* Arkadaş daveti başlığı ve açıklaması */}
+        <div className="page3-title-section">
+            <div className="page3-title">
+                Arkadaşları davet et!
+            </div>
+            <div className="page3-description">
+                Siz ve bir arkadaşınız bonus alacak
+            </div>
         </div>
-    );
-};
+
+        {/* Arkadaş daveti listesi */}
+        <ul className="page3-invite-list">
+            <li className="page3-invite-item">
+                <div className="page3-invite-icon">
+                    <FaGift className="page3-icon" />
+                </div>
+                <div className="page3-invite-text">
+                    <div className="page3-invite-header">Arkadaş davet et</div>
+                    <div className="page3-invite-details">
+                        <div className="page3-price-value text-yellow">+5.000</div>
+                        <div className="page3-invite-footer">sizin ve arkadaşınız için</div>
+                    </div>
+                </div>
+            </li>
+            <li className="page3-invite-item">
+                <div className="page3-invite-icon">
+                    <FaStar className="page3-icon" />
+                </div>
+                <div className="page3-invite-text">
+                    <div className="page3-invite-header">Telegram Premium ile arkadaş davet et</div>
+                    <div className="page3-invite-details">
+                        <div className="page3-price-value text-yellow">+25.000</div>
+                        <div className="page3-invite-footer">sizin ve arkadaşınız için</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+);
 
 export default Page3;

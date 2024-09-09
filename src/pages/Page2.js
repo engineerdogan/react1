@@ -1,30 +1,26 @@
 import React, { useState } from 'react';
 import './Page2.css';
+import { FaKey } from 'react-icons/fa'; // FontAwesome'dan key ikonu
 
 const gameOptions = {
-    Games: [
-        
-		{ id: 16, imageUrl: 'https://cdn.hamsterkombat.io/mow_trim/image.webp', name: 'Mow and Trim' },
-        { id: 15, imageUrl: 'https://cdn.hamsterkombat.io/polysphere/image.webp', name: 'Polysphere' },
-        { id: 14, imageUrl: 'https://cdn.hamsterkombat.io/twerk/image.webp', name: 'Twerk Race 3D' },
-        { id: 13, imageUrl: 'https://cdn.hamsterkombat.io/merge_away/image.webp', name: 'Merge Away' },
-		{ id: 12, imageUrl: 'https://cdn.hamsterkombat.io/fluff/image.webp', name: 'Fluff Crusade' },
-        { id: 11, imageUrl: 'https://cdn.hamsterkombat.io/zoopolis/image.webp', name: 'Zoopolis' },
-        { id: 10, imageUrl: 'https://cdn.hamsterkombat.io/tile_trio/image.webp', name: 'Tile Trio' },
-        { id: 9, imageUrl: 'https://cdn.hamsterkombat.io/mud_racing/image.webp', name: 'Mud Racing' },
-		{ id: 8, imageUrl: 'https://cdn.hamsterkombat.io/mow_trim/image.webp', name: 'Mow and Trim' },
-        { id: 7, imageUrl: 'https://cdn.hamsterkombat.io/polysphere/image.webp', name: 'Polysphere' },
-        { id: 6, imageUrl: 'https://cdn.hamsterkombat.io/twerk/image.webp', name: 'Twerk Race 3D' },
-        { id: 5, imageUrl: 'https://cdn.hamsterkombat.io/merge_away/image.webp', name: 'Merge Away' },
-		{ id: 4, imageUrl: 'https://cdn.hamsterkombat.io/mow_trim/image.webp', name: 'Mow and Trim' },
-        { id: 3, imageUrl: 'https://cdn.hamsterkombat.io/polysphere/image.webp', name: 'Polysphere' },
-        { id: 2, imageUrl: 'https://cdn.hamsterkombat.io/twerk/image.webp', name: 'Twerk Race 3D' },
-        { id: 1, imageUrl: 'https://cdn.hamsterkombat.io/merge_away/image.webp', name: 'Merge Away' },
+    Games: 
+    [
+        { id: 1, imageUrl: 'https://cdn.hamsterkombat.io/stone_age/image.webp', name: 'Stone Age' },
+        { id: 3, imageUrl: 'https://cdn.hamsterkombat.io/fluff/image.webp', name: 'Fluff Crusade' },
+        { id: 4, imageUrl: 'https://cdn.hamsterkombat.io/mow_trim/image.webp', name: 'Mow and Trim' },
+        { id: 5, imageUrl: 'https://cdn.hamsterkombat.io/train_miner/image.webp', name: 'Train Miner' },
+        { id: 6, imageUrl: 'https://cdn.hamsterkombat.io/chain_cube/image.webp', name: 'Chain Cube 2048' },
+        { id: 7, imageUrl: 'https://cdn.hamsterkombat.io/merge_away/image.webp', name: 'Merge Away' },
+        { id: 8, imageUrl: 'https://cdn.hamsterkombat.io/zoopolis/image.webp', name: 'Zoopolis' },
+        { id: 9, imageUrl: 'https://cdn.hamsterkombat.io/twerk/image.webp', name: 'Twerk Race 3D' },
+        { id: 10, imageUrl: 'https://cdn.hamsterkombat.io/polysphere/image.webp', name: 'Polysphere' }
     ],
+    
     Minigames: [
+        { id: 1, imageUrl: '	https://hamsterkombatgame.io/images/minigame/puzzle-bg.webp', name: 'Puzzle Game' },
+        { id: 2, imageUrl: '	https://hamsterkombatgame.io/images/minigame/tiles-bg.webp', name: 'Chain Cube 2048' }
         
-        { id: 2, imageUrl: 'https://cdn.hamsterkombat.io/chain_cube/image.webp', name: 'Chain Cube 2048' },
-    ],
+    ]
 };
 
 const Page2 = () => {
@@ -53,6 +49,11 @@ const Page2 = () => {
                     <div className="page2-game-option" key={game.id} data-game={game.id}>
                         <img src={game.imageUrl} alt={game.name} />
                         <p>{game.name}</p>
+                        {/* Sarı Anahtar İkonu ve 0/4 yazısı */}
+                        <div className="game-key-info">
+                            <FaKey className="game-key-icon" /> {/* CSS ile stil verilecek */}
+                            <span>0/4</span>
+                        </div>
                     </div>
                 ))}
             </div>

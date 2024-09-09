@@ -1,4 +1,4 @@
-.page1-container {
+.main-container {
     width: 100vw;
     max-width: 800px;
     box-sizing: border-box;
@@ -12,7 +12,7 @@
     color: #e0e0e0; /* Yazı rengi açık gri */
 }
 
-.page1-title {
+.main-title {
     font-size: 28px;
     font-weight: bold;
     color: #ffffff;
