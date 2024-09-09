@@ -20,7 +20,6 @@
 
 .page3-title {
     font-size: 24px;
-    font-style: normal;
     font-weight: bold;
     line-height: 32px;
     margin-bottom: 12px;
@@ -106,11 +105,26 @@
 .page3-bonuses {
     width: 100%;
     margin-top: 20px;
+    display: none; /* Başlangıçta bonus detaylarını gizle */
+}
+
+.page3-bonuses.show {
+    display: block; /* Bonus detaylarını göster */
+}
+
+.page3-bonuses-title {
+    font-weight: bold; /* Kalın yazı */
+    color: #fff; /* Beyaz renk */
+    text-align: left; /* Sola dayalı */
+    margin-bottom: 20px; /* Alt boşluk */
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .page3-bonuses-header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Üç sütunlu grid */
+    gap: 10px;
     font-weight: bold;
 }
 
@@ -118,7 +132,6 @@
     font-size: 16px;
     color: #d1d1d1; /* Gri renk */
     font-weight: thin; /* İnce yazı */
-    width: 33%; /* Her başlığa eşit genişlik */
     text-align: center; /* Başlıkları ortala */
 }
 
@@ -130,46 +143,154 @@
 }
 
 .page3-bonuses-item {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     background: #272a2f;
     border-radius: 20px;
-    display: flex;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     padding: 12px;
+    box-sizing: border-box;
 }
 
 .page3-bonuses-content {
     display: flex;
     align-items: center;
-    width: 50%; /* İkon ve isim sütunu genişliği */
 }
 
 .page3-bonuses-icon {
-    margin-right: 12px; /* İkon ile metin arasındaki boşluk */
+    font-size: 24px;
+    color: #e0e0e0;
+    margin-right: 12px;
 }
 
 .page3-bonuses-name {
-    font-size: 16px; /* İsim için uygun font boyutu */
+    font-size: 16px;
     font-weight: normal;
     color: #e0e0e0;
 }
 
 .page3-bonuses-values {
     display: flex;
-    align-items: center;
-    width: 50%; /* Detaylar sütunu genişliği */
+    flex-direction: column; /* Değerleri dikeyde hizala */
+    align-items: flex-start; /* Sol hizalama */
+    justify-content: center; /* Yatayda ortala */
 }
 
 .page3-price-value.text-yellow {
     color: rgb(255, 201, 32);
     font-size: 16px; /* Daha büyük yazı boyutu */
     font-weight: bold;
-    margin-right: 15px; /* Aralarındaki boşluk */
+    margin-bottom: 5px; /* Aralarındaki boşluk */
 }
 
-.page3-title-section p {
-    font-weight: bold; /* Kalın yazı */
-    color: #fff; /* Beyaz yazı rengi */
-    text-align: left; /* Sola dayalı */
+.page3-more-bonuses p {
+    font-weight: bold; /* Normal yazı kalınlığı */
+    color: #5a60ff; /* Yazı rengi */
+    text-align: center; /* Ortada */
     margin: 0; /* Margini sıfırla */
+}
+
+.page3-bonuses.show .page3-more-bonuses p {
+    display: none; /* Bonuslar açıldığında "Daha fazla bonus" yazısını gizle */
+}
+
+.page3-friends-list {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.page3-friends-header {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.refresh-icon {
+    font-size: 24px;
+    color: #e0e0e0;
+}
+
+.friends-item {
+    display: flex;
+    align-items: center;
+    background: #272a2f;
+    border-radius: 20px;
+    margin-bottom: 6px;
+    padding: 8px 12px;
+    justify-content: space-between;
+}
+
+.friends-item .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.friends-item .user-icon {
+    font-size: 24px;
+    color: #e0e0e0;
+    margin-right: 12px;
+}
+
+.friends-item .user-details {
+    display: flex;
+    flex-direction: column;
+    color: #e0e0e0;
+}
+
+.friends-item .user-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.friends-item .user-info-text {
+    font-size: 14px;
+}
+
+.friends-item .price-value {
+    font-size: 16px;
+    color: rgb(255, 201, 32);
+}
+
+/* Arkadaş davet et butonu için */
+.friends-button {
+    bottom: 85px; /* Navbarın altından 85px yukarıda */
+    left: 0;
+    padding: 0 16px;
+    position: fixed;
+    right: 0;
+    z-index: 20;
+    display: flex; /* Butonları yan yana dizmek için */
+    justify-content: center; /* Orta hizalama */
+    gap: 10px; /* Butonlar arasındaki boşluk */
+    background-color: rgba(0, 0, 0, 0.8); /* Arka plan rengi */
+    border-top: 1px solid #444; /* Üst sınır rengi */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3); /* Gölgeler */
+}
+
+.friends-button .button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #5a60ff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.friends-button .button:hover {
+    background-color: #4a50e5;
+}
+
+.friends-button .button .icon {
+    margin-left: 10px;
+    font-size: 24px;
 }
